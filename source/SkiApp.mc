@@ -22,8 +22,20 @@ class SkiApp extends App.AppBase {
 class SkiDelegate extends Ui.BehaviorDelegate {
 
     function onMenu() {
-        Ui.pushView(new Rez.Menus.MainMenu(), new SkiMenuDelegate(), Ui.SLIDE_UP);
-        return true;
+        if( Toybox has :ActivityRecording ) {
+            if( ( session == null ) || ( session.isRecording() == false ) ) {
+                session = Record.createSession({:name=>"Ski", :sport=>Record.SPORT_ALPINE_SKIING});
+                session.start();
+                Ui.requestUpdate();
+            }
+            else if( ( session != null ) && session.isRecording() ) {
+                session.stop();
+                session.save();
+                session = null;
+                Ui.requestUpdate();
+            }
+        }
+
     }
 
 }
