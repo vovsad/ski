@@ -1,0 +1,6 @@
+<resources>
+    <string id="AppName">Ski</string>
+
+    <bitmap id="LauncherIcon" filename="images/ski_icon.png" />
+    <bitmap id="id_monkey" filename="images/ski_icon.png" />
+</resources>

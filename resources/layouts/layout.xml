@@ -1,0 +1,4 @@
+<layout id="MainLayout">
+    <label x="center" y="5" text="Click Button To Start" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <bitmap id="id_monkey" x="center" y="35" filename="../images/ski_icon.png" />
+</layout>
