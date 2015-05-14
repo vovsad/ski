@@ -44,18 +44,17 @@ class SkiView extends Ui.View {
 
         if( Toybox has :ActivityRecording ) {
             // Draw the instructions
+            dc.setColor(Gfx.COLOR_DK_BLUE, Gfx.COLOR_WHITE);
+
             if( ( session == null ) || ( session.isRecording() == false ) ) {
-                dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
-                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to", Gfx.TEXT_JUSTIFY_LEFT);
-                dc.drawText(25, 40, Gfx.FONT_SMALL, "start", Gfx.TEXT_JUSTIFY_LEFT);
+                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to start", Gfx.TEXT_JUSTIFY_LEFT);
             }
             else if( ( session != null ) && session.isRecording() ) {
             //Sys.print(Activity.getActivityInfo().timerTime);
-				dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
             	if (Activity.getActivityInfo().timerTime != null){
             		var hours = Activity.getActivityInfo().timerTime/1000/60/60;
-            		var minutes = Activity.getActivityInfo().timerTime/1000/60;
-            		var seconds = Activity.getActivityInfo().timerTime/1000;
+            		var minutes = Activity.getActivityInfo().timerTime/1000/60 - hours * 60;
+            		var seconds = Activity.getActivityInfo().timerTime/1000 - hours * 60 - minutes * 60;
                 	dc.drawText(20, 10, Gfx.FONT_SMALL, 
 	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
                 		Gfx.TEXT_JUSTIFY_LEFT);
