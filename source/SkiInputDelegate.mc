@@ -5,6 +5,7 @@ using Toybox.ActivityRecording as Record;
 class SkiInputDelegate extends Ui.InputDelegate {
 
     function onKey(item) {
+    Sys.println("Key presses");
         
 	if(item.getKey() == Ui.KEY_ENTER){
 	         if( Toybox has :ActivityRecording ) {
@@ -15,11 +16,18 @@ class SkiInputDelegate extends Ui.InputDelegate {
             }
             else if( ( session != null ) && session.isRecording() ) {
                 session.stop();
-                session.save();
-                session = null;
                 Ui.requestUpdate();
             }
         }
+	 }
+	 
+	 if(item.getKey() == Ui.KEY_MENU){
+	 	if( ( session != null ) && ( session.isRecording() == false ) ) {
+	 		Sys.print("Show Save Menu");
+	 		session.save();
+            session = null;
+	 		
+	 	}
 	 }
 	
     }
