@@ -59,6 +59,7 @@ class SkiView extends Ui.View {
 	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
                 		Gfx.TEXT_JUSTIFY_LEFT);
                 	dc.drawText(20, 50, Gfx.FONT_SMALL, "Max Speed: " + Activity. getActivityInfo().maxSpeed, Gfx.TEXT_JUSTIFY_LEFT);
+                	dc.drawText(20, 90, Gfx.FONT_SMALL, "Total Descent: " + Activity. getActivityInfo().totalDescent, Gfx.TEXT_JUSTIFY_LEFT);
                 	}else{
                 	dc.drawText(20, 10, Gfx.FONT_SMALL, "Not started yet", Gfx.TEXT_JUSTIFY_LEFT);
                 	}
