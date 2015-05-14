@@ -50,14 +50,19 @@ class SkiView extends Ui.View {
                 dc.drawText(25, 40, Gfx.FONT_SMALL, "start", Gfx.TEXT_JUSTIFY_LEFT);
             }
             else if( ( session != null ) && session.isRecording() ) {
-            	var hours = Activity.getActivityInfo().timerTime/1000/60/60;
-            	var minutes = Activity.getActivityInfo().timerTime/1000/60;
-            	var seconds = Activity.getActivityInfo().timerTime/1000;
-                dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
-                dc.drawText(20, 10, Gfx.FONT_SMALL, 
-                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
-                	Gfx.TEXT_JUSTIFY_LEFT);
-                dc.drawText(20, 50, Gfx.FONT_SMALL, "Max Speed: " + Activity. getActivityInfo().maxSpeed, Gfx.TEXT_JUSTIFY_LEFT);
+            //Sys.print(Activity.getActivityInfo().timerTime);
+				dc.setColor(Gfx.COLOR_BLUE, Gfx.COLOR_WHITE);
+            	if (Activity.getActivityInfo().timerTime != null){
+            		var hours = Activity.getActivityInfo().timerTime/1000/60/60;
+            		var minutes = Activity.getActivityInfo().timerTime/1000/60;
+            		var seconds = Activity.getActivityInfo().timerTime/1000;
+                	dc.drawText(20, 10, Gfx.FONT_SMALL, 
+	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
+                		Gfx.TEXT_JUSTIFY_LEFT);
+                	dc.drawText(20, 50, Gfx.FONT_SMALL, "Max Speed: " + Activity. getActivityInfo().maxSpeed, Gfx.TEXT_JUSTIFY_LEFT);
+                	}else{
+                	dc.drawText(20, 10, Gfx.FONT_SMALL, "Not started yet", Gfx.TEXT_JUSTIFY_LEFT);
+                	}
             }
         }
         // tell the user this sample doesn't work
