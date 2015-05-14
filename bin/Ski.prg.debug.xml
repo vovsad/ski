@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
 <pcToLineNum>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiView.mc" lineNum="8" pc="268435458" symbol="onLayout"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiView.mc" lineNum="18" pc="268435501" symbol="onUpdate"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiMenuDelegate.mc" lineNum="7" pc="268435528" symbol="onMenuItem"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiMenuDelegate.mc" lineNum="8" pc="268435539" symbol="onMenuItem"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiMenuDelegate.mc" lineNum="10" pc="268435574" symbol="onMenuItem"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiInputDelegate.mc" lineNum="8" pc="268435602" symbol="onKey"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiApp.mc" lineNum="17" pc="268435630" symbol="getInitialView"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiApp.mc" lineNum="25" pc="268435701" symbol="onMenu"/>
-<entry filename="/Users/vsadovyy/Documents/workspace/Ski/source/SkiApp.mc" lineNum="26" pc="268435785" symbol="onMenu"/>
-<entry filename="Rez" lineNum="5" pc="268436316" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="13" pc="268435792" symbol="initialize"/>
-<entry filename="Rez" lineNum="14" pc="268435814" symbol="initialize"/>
-<entry filename="Rez" lineNum="21" pc="268436275" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="22" pc="268436284" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="31" pc="268435839" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="32" pc="268435853" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="33" pc="268435963" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="34" pc="268435978" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="35" pc="268436030" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="36" pc="268436118" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="37" pc="268436170" symbol="MainLayout"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="17" pc="268435458" symbol="onLayout"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="19" pc="268435495" symbol="onLayout"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="21" pc="268435529" symbol="onLayout"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="27" pc="268435573" symbol="timerUpdatesUi"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="35" pc="268435592" symbol="onShow"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="41" pc="268435639" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="42" pc="268435651" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="43" pc="268435687" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="45" pc="268435731" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="47" pc="268435748" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="48" pc="268435787" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="49" pc="268435823" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="50" pc="268435874" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="54" pc="268435964" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="55" pc="268436000" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="56" pc="268436026" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="57" pc="268436067" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="58" pc="268436102" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="59" pc="268436131" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="62" pc="268436203" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="64" pc="268436279" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="70" pc="268436336" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="71" pc="268436372" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="72" pc="268436423" symbol="onUpdate"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="83" pc="268436480" symbol="onHide"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiView.mc" lineNum="10" pc="268437569" symbol="&lt;init&gt;"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="9" pc="268436528" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="10" pc="268436555" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="11" pc="268436572" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="12" pc="268436611" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="13" pc="268436673" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="14" pc="268436691" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="17" pc="268436746" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="18" pc="268436764" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="19" pc="268436782" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiInputDelegate.mc" lineNum="20" pc="268436791" symbol="onKey"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="17" pc="268436826" symbol="getInitialView"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="25" pc="268436897" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="26" pc="268436914" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="27" pc="268436953" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="28" pc="268437019" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="29" pc="268437037" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="32" pc="268437092" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="33" pc="268437110" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="34" pc="268437128" symbol="onMenu"/>
+<entry filename="D:\\projects\\Garmin\\git\\source\\SkiApp.mc" lineNum="35" pc="268437137" symbol="onMenu"/>
+<entry filename="Rez" lineNum="5" pc="268437677" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="13" pc="268437163" symbol="initialize"/>
+<entry filename="Rez" lineNum="14" pc="268437185" symbol="initialize"/>
+<entry filename="Rez" lineNum="21" pc="268437636" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="22" pc="268437645" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="31" pc="268437210" symbol="MainLayout"/>
+<entry filename="Rez" lineNum="32" pc="268437224" symbol="MainLayout"/>
+<entry filename="Rez" lineNum="33" pc="268437334" symbol="MainLayout"/>
+<entry filename="Rez" lineNum="34" pc="268437349" symbol="MainLayout"/>
+<entry filename="Rez" lineNum="35" pc="268437401" symbol="MainLayout"/>
+<entry filename="Rez" lineNum="36" pc="268437489" symbol="MainLayout"/>
+<entry filename="Rez" lineNum="37" pc="268437541" symbol="MainLayout"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8389359" symbol="&lt;gre&gt;"/>
@@ -208,6 +245,7 @@
 <entry id="8389116" method="true" symbol="getHeight"/>
 <entry id="8388675" method="true" symbol="testGreaterThanEqual"/>
 <entry id="8389393" method="true" symbol="initResources"/>
+<entry id="22" symbol="Record"/>
 <entry id="8388665" method="true" symbol="testMul"/>
 <entry field="true" id="8389404" symbol="elevationUnits"/>
 <entry field="true" id="8389223" symbol="MSG_CODE_EVENT_RX_FAIL_GO_TO_SEARCH"/>
@@ -308,6 +346,7 @@
 <entry id="8389132" method="true" symbol="setFont"/>
 <entry field="true" id="8389519" symbol="torque"/>
 <entry field="true" id="8389529" symbol="userProfileSelected"/>
+<entry field="true" id="8" symbol="timer"/>
 <entry field="true" id="8389039" symbol="NUMBER_PICKER_CALORIES"/>
 <entry id="8389541" method="true" symbol="onCancel"/>
 <entry field="true" id="8388968" symbol="TONE_STOP"/>
@@ -420,8 +459,8 @@
 <entry field="true" id="8389524" symbol="swRevisionSupplemental"/>
 <entry field="true" id="8388851" symbol="SUB_SPORT_TREADMILL"/>
 <entry id="8389398" method="true" symbol="getDeviceSettings"/>
-<entry id="21" symbol="item_2"/>
-<entry id="20" symbol="item_1"/>
+<entry id="24" symbol="item_2"/>
+<entry id="23" symbol="item_1"/>
 <entry field="true" id="8389238" symbol="network"/>
 <entry id="8388639" module="true" symbol="Graphics"/>
 <entry field="true" id="8389502" symbol="rightPedalIndicator"/>
@@ -459,6 +498,7 @@
 <entry id="8389322" symbol="april"/>
 <entry id="8389304" method="true" symbol="testInfoString"/>
 <entry field="true" id="8388839" symbol="SPORT_AMERICAN_FOOTBALL"/>
+<entry id="20" method="true" symbol="timerUpdatesUi"/>
 <entry id="8388778" symbol="mClass"/>
 <entry id="8388934" method="true" symbol="momentNative"/>
 <entry field="true" id="8389000" symbol="KEY_DOWN_RIGHT"/>
@@ -754,9 +794,8 @@
 <entry id="8389258" method="true" symbol="release"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
 <entry field="true" id="8389150" symbol="activityClass"/>
-<entry id="9" object="true" symbol="SkiMenuDelegate"/>
 <entry id="8389254" method="true" symbol="getDeviceConfig"/>
-<entry id="8" object="true" symbol="SkiView"/>
+<entry id="9" object="true" symbol="SkiView"/>
 <entry id="8389233" object="true" symbol="ChannelAssignment"/>
 <entry id="8388628" module="true" symbol="Toybox_Ant"/>
 <entry id="8389090" object="true" symbol="MenuItem"/>
@@ -780,6 +819,7 @@
 <entry field="true" id="8388733" symbol="timerTime"/>
 <entry field="true" id="8388755" symbol="swimEfficency"/>
 <entry id="8388935" method="true" symbol="duration"/>
+<entry id="21" method="true" symbol="onPosition"/>
 <entry field="true" id="8389263" symbol="DEFAULT_DEVICE_TYPE"/>
 <entry id="8388728" method="true" symbol="getActivityInfo"/>
 <entry field="true" id="8388751" symbol="averageCadence"/>
@@ -979,19 +1019,22 @@
 <param id="dc"/>
 <documentation><![CDATA[<div class="description"> Load your resources here<br/></div>]]></documentation>
 </functionEntry>
+<functionEntry name="timerUpdatesUi">
+<documentation/>
+</functionEntry>
 <functionEntry name="onShow">
-<documentation><![CDATA[<div class="description"> Restore the state of the app and prepare the view to be shown<br/></div>]]></documentation>
+<documentation><![CDATA[<div class="description"> Restore the state of the app and prepare the view to be shown<br/> We need to enable the location events for now so that we make sure GPS<br/> is on.<br/></div>]]></documentation>
 </functionEntry>
 <functionEntry name="onUpdate">
 <param id="dc"/>
 <documentation><![CDATA[<div class="description"> Update the view<br/></div>]]></documentation>
 </functionEntry>
+<functionEntry name="onPosition">
+<param id="info"/>
+<documentation/>
+</functionEntry>
 <functionEntry name="onHide">
 <documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of your app here.<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry name="onMenuItem">
-<param id="item"/>
-<documentation/>
 </functionEntry>
 <functionEntry name="onKey">
 <param id="item"/>
