@@ -8,8 +8,13 @@ using Toybox.Timer as Timer;
 
 var timer;
 var session = null;
+var isShowSaveView = false;
 
 class SkiView extends Ui.View {
+
+	var hours;
+	var minutes;
+	var seconds;
 
 
     //! Load your resources here
@@ -39,38 +44,13 @@ class SkiView extends Ui.View {
     function onUpdate(dc) {
         // Set background color
         dc.clear();
-        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
-
-        if( Toybox has :ActivityRecording ) {
-            // Draw the instructions
-            dc.setColor(Gfx.COLOR_DK_BLUE, Gfx.COLOR_WHITE);
-
-            if( ( session == null ) || ( session.isRecording() == false ) ) {
-                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to start", Gfx.TEXT_JUSTIFY_LEFT);
-            }
-            else if( ( session != null ) && session.isRecording() ) {
-            //Sys.print(Activity.getActivityInfo().timerTime);
-            	if (Activity.getActivityInfo().timerTime != null){
-            		var hours = Activity.getActivityInfo().timerTime/1000/60/60;
-            		var minutes = Activity.getActivityInfo().timerTime/1000/60 - hours * 60;
-            		var seconds = Activity.getActivityInfo().timerTime/1000 - hours * 60 - minutes * 60;
-                	dc.drawText(20, 10, Gfx.FONT_SMALL, 
-	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
-                		Gfx.TEXT_JUSTIFY_LEFT);
-                	dc.drawText(20, 50, Gfx.FONT_SMALL, "Max Speed: " + Activity. getActivityInfo().maxSpeed, Gfx.TEXT_JUSTIFY_LEFT);
-                	dc.drawText(20, 90, Gfx.FONT_SMALL, "Total Descent: " + Activity. getActivityInfo().totalDescent, Gfx.TEXT_JUSTIFY_LEFT);
-                	}else{
-                	dc.drawText(20, 10, Gfx.FONT_SMALL, "Not started yet", Gfx.TEXT_JUSTIFY_LEFT);
-                	}
-            }
+        
+        if(isShowSaveView){
+        	showSaveView(dc);
+        }else{
+        	showCurrentSessionView(dc);
         }
-        // tell the user this sample doesn't work
-        else {
-            dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_WHITE);
-            dc.drawText(20, 20, Gfx.FONT_SMALL, "This product doesn't", Gfx.TEXT_JUSTIFY_LEFT);
-            dc.drawText(25, 50, Gfx.FONT_SMALL, "have FIT Support", Gfx.TEXT_JUSTIFY_LEFT);
-        }
+        
     }
 
     function onPosition(info) {
@@ -82,5 +62,58 @@ class SkiView extends Ui.View {
     function onHide() {
         Position.enableLocationEvents(Position.LOCATION_DISABLE, method(:onPosition));
     }
+    
+    function showSaveView(dc) {
+    	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+    	dc.drawText(20, 10, Gfx.FONT_SMALL, 
+	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
+                		Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(20, 40, Gfx.FONT_SMALL, "Distance: " + Activity. getActivityInfo().elapsedDistance / 1000 + "km", Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawLine(0, 80, dc.getWidth(), 80);
+        dc.drawLine(80, 80, 80, dc.getHeight());
+        
+        dc.drawText(120, 100, Gfx.FONT_MEDIUM, "Save", Gfx.TEXT_JUSTIFY_LEFT);
+    }
+
+	function showCurrentSessionView(dc) {
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+
+        if( Toybox has :ActivityRecording ) {
+            // Draw the instructions
+            dc.setColor(Gfx.COLOR_DK_BLUE, Gfx.COLOR_WHITE);
+
+            if( ( session == null )) {
+                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to start", Gfx.TEXT_JUSTIFY_LEFT);
+            }
+            else if( ( session != null ) && ( session.isRecording() == false ) ) {
+                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to continue", Gfx.TEXT_JUSTIFY_LEFT);
+               	dc.drawText(20, 40, Gfx.FONT_SMALL, "or Menu to save", Gfx.TEXT_JUSTIFY_LEFT);
+            }
+            else if( ( session != null ) && session.isRecording() ) {
+            //Sys.print(Activity.getActivityInfo().timerTime);
+            	if (Activity.getActivityInfo().elapsedTime != null){
+            		hours = Activity.getActivityInfo().timerTime/1000/60/60;
+            		minutes = Activity.getActivityInfo().timerTime/1000/60 - hours * 60;
+            		seconds = Activity.getActivityInfo().timerTime/1000 - hours * 60 - minutes * 60;
+            		
+                	dc.drawText(20, 10, Gfx.FONT_SMALL, 
+	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
+                		Gfx.TEXT_JUSTIFY_LEFT);
+                	dc.drawText(20, 40, Gfx.FONT_SMALL, "Max Speed: " + Activity. getActivityInfo().maxSpeed, Gfx.TEXT_JUSTIFY_LEFT);
+                	dc.drawText(20, 70, Gfx.FONT_SMALL, "Total Descent: " + Activity. getActivityInfo().totalDescent, Gfx.TEXT_JUSTIFY_LEFT);
+                	}else{
+                	dc.drawText(20, 10, Gfx.FONT_SMALL, "Not started yet", Gfx.TEXT_JUSTIFY_LEFT);
+                	}
+            }
+        }
+        // tell the user this sample doesn't work
+        else {
+            dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_WHITE);
+            dc.drawText(20, 20, Gfx.FONT_SMALL, "This product doesn't", Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(25, 40, Gfx.FONT_SMALL, "have FIT Support", Gfx.TEXT_JUSTIFY_LEFT);
+        }
+	}
 
 }
+
