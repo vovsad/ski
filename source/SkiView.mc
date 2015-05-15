@@ -73,6 +73,8 @@ class SkiView extends Ui.View {
         dc.drawLine(80, 80, 80, dc.getHeight());
         
         dc.drawText(120, 100, Gfx.FONT_MEDIUM, "Save", Gfx.TEXT_JUSTIFY_LEFT);
+        var rec_image = Ui.loadResource(Rez.Drawables.id_recycled);
+        dc.drawBitmap(25, 100, rec_image);
     }
 
 	function showCurrentSessionView(dc) {

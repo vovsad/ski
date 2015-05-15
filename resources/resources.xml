@@ -2,5 +2,11 @@
     <string id="AppName">Ski</string>
 
     <bitmap id="LauncherIcon" filename="images/ski_icon.png" />
-    <bitmap id="id_monkey" filename="images/ski_icon.png" />
+    <bitmap id="id_recycled" filename="images/recycled_icon.png" >
+	    <palette>
+	      <color>FFFFFF</color>
+	      <color>FFFFFF</color>
+	      <color>FFFFFF</color>
+	    </palette>
+    </bitmap>
 </resources>
