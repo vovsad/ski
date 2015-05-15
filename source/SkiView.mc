@@ -19,7 +19,7 @@ class SkiView extends Ui.View {
 
     //! Load your resources here
     function onLayout(dc) {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        //setLayout(Rez.Layouts.MainLayout(dc));
         
         timer = new Timer.Timer();
 
@@ -64,6 +64,8 @@ class SkiView extends Ui.View {
     }
     
     function showSaveView(dc) {
+    	dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
+    	dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
     	dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
     	dc.drawText(20, 10, Gfx.FONT_SMALL, 
 	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
@@ -89,11 +91,10 @@ class SkiView extends Ui.View {
                 dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to start", Gfx.TEXT_JUSTIFY_LEFT);
             }
             else if( ( session != null ) && ( session.isRecording() == false ) ) {
-                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press Enter to continue", Gfx.TEXT_JUSTIFY_LEFT);
+                dc.drawText(20, 10, Gfx.FONT_SMALL, "Press again to continue", Gfx.TEXT_JUSTIFY_LEFT);
                	dc.drawText(20, 40, Gfx.FONT_SMALL, "or Menu to save", Gfx.TEXT_JUSTIFY_LEFT);
             }
             else if( ( session != null ) && session.isRecording() ) {
-            //Sys.print(Activity.getActivityInfo().timerTime);
             	if (Activity.getActivityInfo().elapsedTime != null){
             		hours = Activity.getActivityInfo().timerTime/1000/60/60;
             		minutes = Activity.getActivityInfo().timerTime/1000/60 - hours * 60;
