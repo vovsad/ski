@@ -15,6 +15,10 @@ class SkiView extends Ui.View {
 	var hours;
 	var minutes;
 	var seconds;
+	
+	var hoursAsString = "";
+	var minutesAsString = "";
+	var secondsAsString = "";
 
 
     //! Load your resources here
@@ -70,7 +74,7 @@ class SkiView extends Ui.View {
     	dc.drawText(20, 10, Gfx.FONT_SMALL, 
 	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
                 		Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(20, 40, Gfx.FONT_SMALL, "Distance: " + Activity. getActivityInfo().elapsedDistance / 1000 + "km", Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(20, 40, Gfx.FONT_SMALL, "Distance: " + Activity. getActivityInfo().elapsedDistance.toNumber() / 1000 + "km", Gfx.TEXT_JUSTIFY_LEFT);
         dc.drawLine(0, 80, dc.getWidth(), 80);
         dc.drawLine(80, 80, 80, dc.getHeight());
         
@@ -97,14 +101,19 @@ class SkiView extends Ui.View {
             else if( ( session != null ) && session.isRecording() ) {
             	if (Activity.getActivityInfo().elapsedTime != null){
             		hours = Activity.getActivityInfo().timerTime/1000/60/60;
+            		if (hours < 10){hoursAsString = "0" + hours;}else{ hoursAsString = hours;}
+            		
             		minutes = Activity.getActivityInfo().timerTime/1000/60 - hours * 60;
+            		if (minutes < 10){minutesAsString = "0" + minutes;}else{minutesAsString = minutes;}
+            		
             		seconds = Activity.getActivityInfo().timerTime/1000 - hours * 60 - minutes * 60;
+            		if (seconds < 10){secondsAsString = "0" + seconds;}else{secondsAsString = seconds;}
             		
                 	dc.drawText(20, 10, Gfx.FONT_SMALL, 
-	                	"Duration: " + hours + ":" + minutes + ":" + seconds, 
+	                	"Duration: "+ hoursAsString + ":" + minutesAsString + ":" + secondsAsString, 
                 		Gfx.TEXT_JUSTIFY_LEFT);
-                	dc.drawText(20, 40, Gfx.FONT_SMALL, "Max Speed: " + Activity. getActivityInfo().maxSpeed, Gfx.TEXT_JUSTIFY_LEFT);
-                	dc.drawText(20, 70, Gfx.FONT_SMALL, "Total Descent: " + Activity. getActivityInfo().totalDescent, Gfx.TEXT_JUSTIFY_LEFT);
+                	dc.drawText(20, 40, Gfx.FONT_SMALL, "Max Speed: " + (Activity. getActivityInfo().maxSpeed/1000*3600).toNumber()  + " km/h", Gfx.TEXT_JUSTIFY_LEFT);
+                	dc.drawText(20, 70, Gfx.FONT_SMALL, "Total Descent: " + Activity. getActivityInfo().totalDescent.toNumber() / 1000  + " km", Gfx.TEXT_JUSTIFY_LEFT);
                 	}else{
                 	dc.drawText(20, 10, Gfx.FONT_SMALL, "Not started yet", Gfx.TEXT_JUSTIFY_LEFT);
                 	}
