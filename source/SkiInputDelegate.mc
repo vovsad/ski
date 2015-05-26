@@ -21,15 +21,11 @@ class SkiInputDelegate extends Ui.InputDelegate {
 	                Sys.print("Stop");
     	        }
         	}
-	 	}
-	 
-		if(item.getKey() == Ui.KEY_MENU){
+	 	}else if(item.getKey() == Ui.KEY_MENU){
 	 		if(( session != null ) && ( session.isRecording() == false )) {
 	 			isShowSaveView = true;
 			}
-	 	}
-	 
-	 	if(item.getKey() == Ui.KEY_ESC){
+	 	}else if(item.getKey() == Ui.KEY_ESC){
 	 		isShowSaveView = false;
 	 	}
 

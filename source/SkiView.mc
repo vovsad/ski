@@ -23,8 +23,6 @@ class SkiView extends Ui.View {
 
     //! Load your resources here
     function onLayout(dc) {
-        //setLayout(Rez.Layouts.MainLayout(dc));
-        
         timer = new Timer.Timer();
 
         timer.start( method(:timerUpdatesUi), 1000, true );
@@ -46,7 +44,6 @@ class SkiView extends Ui.View {
 
     //! Update the view
     function onUpdate(dc) {
-        // Set background color
         dc.clear();
         
         if(isShowSaveView){
@@ -54,7 +51,6 @@ class SkiView extends Ui.View {
         }else{
         	showCurrentSessionView(dc);
         }
-        
     }
 
     function onPosition(info) {
@@ -98,8 +94,10 @@ class SkiView extends Ui.View {
                 dc.drawText(20, 10, Gfx.FONT_SMALL, "Press again to continue", Gfx.TEXT_JUSTIFY_LEFT);
                	dc.drawText(20, 40, Gfx.FONT_SMALL, "or Menu to save", Gfx.TEXT_JUSTIFY_LEFT);
             }
-            else if( ( session != null ) && session.isRecording() ) {
-            	if (Activity.getActivityInfo().elapsedTime != null){
+            else if((session != null ) && session.isRecording()) {
+            	if (Activity.getActivityInfo().timerTime != null &&
+            		Activity. getActivityInfo().maxSpeed != null && 
+            		Activity. getActivityInfo().totalDescent != null){
             		hours = Activity.getActivityInfo().timerTime/1000/60/60;
             		if (hours < 10){hoursAsString = "0" + hours;}else{ hoursAsString = hours;}
             		
@@ -119,13 +117,13 @@ class SkiView extends Ui.View {
                 	}
             }
         }
-        // tell the user this sample doesn't work
+        // tell the user this app doesn't work
         else {
             dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_WHITE);
             dc.drawText(20, 20, Gfx.FONT_SMALL, "This product doesn't", Gfx.TEXT_JUSTIFY_LEFT);
             dc.drawText(25, 40, Gfx.FONT_SMALL, "have FIT Support", Gfx.TEXT_JUSTIFY_LEFT);
         }
-	}
+	}	
 
 }
 
