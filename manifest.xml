@@ -3,16 +3,14 @@
 
         <iq:products>
             <iq:product id="square_watch"/>
-            <iq:product id="round_watch"/>
             <iq:product id="vivoactive"/>
-            <iq:product id="fenix3"/>
             <iq:product id="fr920xt"/>
             <iq:product id="epix"/>
         </iq:products>
 
         <iq:permissions>
-        	<iq:uses-permission id="Positioning"/>
-        	<iq:uses-permission id="Fit"/>
+            <iq:uses-permission id="Positioning"/>
+            <iq:uses-permission id="Fit"/>
         </iq:permissions>
 
         <iq:languages>
